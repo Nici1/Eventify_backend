@@ -19,14 +19,14 @@ dotenv.config()
 const app = express()
 
 
-app.use(cors( {origin: 'http://localhost:5000',
+app.use(cors( {origin: 'https://eventify-4gdp.onrender.com',
   credentials: true,
   secure: true}));
 
 app.use(cookieParser());
 app.use(express.json())
 
-
+/*
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -35,7 +35,7 @@ app.use((req, res, next) => {
   next();
 });
 
-
+*/
 
 
 //app.use(cors())
