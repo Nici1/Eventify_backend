@@ -17,7 +17,7 @@ import { get_Applications, get_Performer, insert_Application } from './model/dat
 dotenv.config()
 
 const app = express()
-
+const port = process.env.PORT;
 
 app.use(cors( {origin: 'https://eventify-4gdp.onrender.com',
   credentials: true,
@@ -158,7 +158,7 @@ app.use((err, req, res, next) => {
 
 
 
-app.listen(4000, () =>{
-console.log('Server is listening on port 4000...')
+app.listen(port, () =>{
+console.log(`Server is listening on port ${port}...`)
 });
 
